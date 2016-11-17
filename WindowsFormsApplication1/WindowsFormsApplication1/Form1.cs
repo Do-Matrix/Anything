@@ -76,6 +76,7 @@ namespace WindowsFormsApplication1
         private void CoursesListView_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            string studentinfo = StudentListView.SelectedIndices[0].ToString();
         }
     }
 }

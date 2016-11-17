@@ -62,9 +62,9 @@ namespace WindowsFormsApplication1
             ProgramIndex programData = ds.LoadData();
             CourseList = programData.ListAllCoursesByStudent(sender);
             Completioncheck = programData.CompletionStatusPerType(sender);
-            GenEdCompletion.Text = Completionstringbase[0] + Completioncheck[0] + "%";
-            CoreCompletion.Text = Completionstringbase[1] + Completioncheck[1] + "%";
-            ElectiveCompletion.Text = Completionstringbase[2] + Completioncheck[2] + "%";
+            GenEdCompletion.Text = Completionstringbase[0] + Completioncheck[0];
+            CoreCompletion.Text = Completionstringbase[1] + Completioncheck[1];
+            ElectiveCompletion.Text = Completionstringbase[2] + Completioncheck[2];
             CoursesListView.Clear();
             foreach (string sCourse in CourseList)
             {
@@ -75,8 +75,8 @@ namespace WindowsFormsApplication1
 
         private void CoursesListView_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //find grades by using method OutputGrades(StudentListView.SelectedIndices[0].ToString();
 
-            string studentinfo = StudentListView.SelectedIndices[0].ToString();
         }
     }
 }

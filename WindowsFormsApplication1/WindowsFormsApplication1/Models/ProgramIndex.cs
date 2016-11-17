@@ -97,6 +97,9 @@ namespace StudentDataViewer.Models
                         break;
                 }
             }
+            CompletionList[0] = (CompletionList[0] / 8) * 100;
+            CompletionList[1] = (CompletionList[1] / 26) * 100;
+            CompletionList[2] = (CompletionList[2] / 8) * 100;
             return CompletionList;
         }
 
